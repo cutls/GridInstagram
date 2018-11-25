@@ -59,9 +59,6 @@
     </style>
   </head>
   <body>
-  <div id="header">
-        <div class="title"><?php echo $config["title"] ?></div>
-        </div>
       <div id="wrap">
         <div id="box">
           <div id="picture-side">
