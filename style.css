@@ -1,0 +1,118 @@
+@font-face {
+	font-family: 'Instagram';
+	src: url(Billabong.ttf);
+}
+.title{
+    font-family: Instagram;
+    font-size:200%;
+}
+body{
+    border:1px solid;
+    top:0 !IMPORTANT;
+    left:0 !IMPORTANT;
+    height:258mm !IMPORTANT;
+    width:376.5mm !IMPORTANT;
+    background-color:#fafafa;
+}
+@media print{
+    body{
+        border:0 solid;
+    }
+}
+img.emoji {
+    height: 1em;
+    width: 1em;
+    margin: 0 .05em 0 .1em;
+    vertical-align: -0.1em;
+ }
+ #header{
+     height:7%;
+     background-color: white;
+     border: 1px solid #e6e6e6;
+     display:flex;
+     justify-content: center;
+     align-items: flex-end;
+ }
+#wrap{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:100%;
+    height:93%;
+    font-size:80%;
+}
+#box{
+    width:350mm;
+    height:227.5mm;
+    border: 1px solid #e6e6e6;
+    border-bottom-right-radius: 3px;
+    border-top-right-radius: 3px;
+    display: grid;
+    grid-template-rows: 203.5mm 24mm;
+    grid-template-columns: 58% 42%;
+    grid-template-areas:'pictureside commentsside' 'additionalside commentsside' 
+}
+#comments-side{
+    grid-area:commentsside;
+    background-color:white;
+    height:100%;
+    width:100%;  
+}
+#add-side{
+    grid-area:additionalside;
+    background-color:white;
+    height:100%;
+    width:100%;  
+}
+#user{
+    width:90%;
+    display:flex;
+    align-items:center;
+    font-weight: 600;
+    border-bottom: 1px solid #efefef;
+    margin:5%;
+    margin-bottom:1%;
+    margin-top:1%;
+}
+#user-img{
+    width:70px;
+}
+#comments{
+    width:93%;
+    margin:3.5%;
+    margin-top:0;
+}
+.name{
+    font-weight: 600;
+    margin-right:3px;
+}
+.comment{
+    margin-top:-3px;
+}
+.comment:first-child{
+    margin-bottom:4px;
+}
+#insta-likes{
+    height:36px;
+    margin-left:1%;
+}
+#insta-bm{
+    height:36px;
+    margin-left:30%;
+}
+#likes-count{
+    margin-left:1%;
+    float:left;
+}
+#times-count{
+    font-size: 10px;
+    color: #999;
+}
+#comment-add{
+    color: #999;
+    margin-left:48%;
+    border-top: 1px solid #efefef;
+    width:80%;
+    margin-top:4px;
+    padding:8px;
+}
