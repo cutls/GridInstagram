@@ -116,3 +116,23 @@ img.emoji {
     margin-top:4px;
     padding:8px;
 }
+#location{
+    position:absolute;
+    bottom:8%;
+    left:calc(50% - 35px);
+    background-color: white;
+    padding-top:-5px;
+    padding-left:5px;
+    padding-right:5px;
+    border-radius:5px;
+}
+#location .letters{
+    background: -webkit-linear-gradient(0deg, #311b92, #5e35b1, #1565c0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: 'Rajdhani', sans-serif;
+  font-size:250%;
+}
+img#room{
+    width:1rem !important;
+}

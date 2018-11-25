@@ -9,6 +9,7 @@
 <html lang="ja" dir="ltr" itemscope itemtype="http://schema.org/ProfilePage">
 	<head prefix="og: http://ogp.me/ns#">
     <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons|Rajdhani:500" rel="stylesheet">
 		<link rel="stylesheet" href="style.css">
 		<title><?php echo $config["title"] ?></title>
     <!--script src=".js"></script-->
@@ -50,6 +51,7 @@
     <?php endfor; ?>
     #picture_center{
       grid-area: picture_center;
+      position:relative;
     }
     #picture-side img{
       width:100%;
@@ -81,6 +83,7 @@
             <?php endfor; ?>
             </div>
             <div id="picture_center">
+              <span id="location"><img src="room.svg" id="room"><span class="letters"><?php echo $config["title"] ?></span></span>
               <img src="./img_deploy/center/1.jpg">
             </div>
           </div>
