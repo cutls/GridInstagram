@@ -1,9 +1,4 @@
-@font-face {
-	font-family: 'Instagram';
-	src: url(Billabong.ttf);
-}
 .title{
-    font-family: Instagram;
     font-size:200%;
 }
 body{

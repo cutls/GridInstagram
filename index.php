@@ -1,5 +1,4 @@
 <?php
-  $title="Instagram";
   $ct=1;
   $ct2=0;
   require("config.php");
