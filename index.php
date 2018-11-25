@@ -2,10 +2,7 @@
   $title="Instagram";
   $ct=1;
   $ct2=0;
-  $names=[
-    "Kenji.T","Yuki.I","Tasuku.I","Tatsunari.I","Soshi.I","Sonoko.O","Ryo.O","Kotaro.O","Yuri.O","Tomoka.O","Kosuke.O","Yosei.K","Yuuki.K","Yuki.K","Aya.K","Kota.K","Junnosuke.K","Yusuke.K","Keita.K","Shota.G","Hirotaka.K",
-    "Haruka.S","Daichi.S","Taisei.S","Hikaru.S","Juhwan.C","Masaya.T","Rei.T","Lisa.N","Kazuma.N","Nao.H","Tomoka.H","Kaho.H","Masatake.H","Takuya.F","Soichiro.F","Ryo.M","Jun.M","Ryouta.M","Takashi.M","Yukino.Y","Kouki.Y","Yuta.Y","Shiori.Y","Ryuki.Y"
-  ];
+  require("config.php");
   $comments=explode("\n",file_get_contents("comments.txt"));
 ?>
 <!doctype html>
@@ -13,7 +10,7 @@
 	<head prefix="og: http://ogp.me/ns#">
     <meta charset="utf-8">
 		<link rel="stylesheet" href="style.css">
-		<title>3-4 卒業アルバム</title>
+		<title><?php echo $config["title"] ?></title>
     <!--script src=".js"></script-->
     <style>
     #picture-side{
@@ -62,7 +59,7 @@
   </head>
   <body>
   <div id="header">
-        <div class="title">3-4</div>
+        <div class="title"><?php echo $config["title"] ?></div>
         </div>
       <div id="wrap">
         <div id="box">
@@ -91,7 +88,7 @@
             <div id="info">
               <img src="./img_deploy/components/insta-likes.png" id="insta-likes">
               <img src="./img_deploy/components/insta-bm.png" id="insta-bm"><br>
-              <div id="likes-count"><b>いいね！44K件</b><br><span id="times-count">3年前から</span></div>
+              <div id="likes-count"><b>いいね！<?php echo $config["likes"] ?>件</b><br><span id="times-count"><?php echo $config["time"] ?></span></div>
               <div id="comment-add">
                 コメントを追加...
               </div>
@@ -99,13 +96,13 @@
           </div>
           <div id="comments-side">
               <div id="user">
-                <img src="./img_deploy/components/kenji.png" id="user-img">
+                <img src="./img_deploy/components/pg.png" id="user-img">
                 <div id="user-name">
-                  Kenji.T・フォロー中
+                <?php echo $config["name"] ?>・フォロー中
                 </div>
               </div>
               <div id="comments">
-              <?php for($i=0;$i<=44;$i++): ?>
+              <?php for($i=0;$i<=$config["count"];$i++): ?>
                   <div class="comment"><span class="name"><?php echo $names[$i]; ?></span><?php echo $comments[$i]; ?></div>
               <?php endfor; ?>
               </div>
